@@ -1,6 +1,6 @@
 ---
 title: mysql死锁分析
-description: ''
+description: '一次分析MySQL死锁的经历'
 publishDate: 2025-07-26 08:00:00
 tags:
   - mysql
@@ -15,7 +15,7 @@ tags:
 
 某天存储过程报错：
 
-```
+```sql
 SQLSTATE=40001MESSAGE:Deadlock found when trying to get lock; try restarting transaction
 ```
 
@@ -95,7 +95,7 @@ AND info_id = temp_info_id;
 - 使用`SHOW ENGINE INNODB STATUS`语句，可以看到最近的死锁日志。
 - 提取部分的死锁日志信息如下：
 
-```
+```sql
 ------------------------
 LATEST DETECTED DEADLOCK
 ------------------------

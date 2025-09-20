@@ -40,6 +40,8 @@ const typographyConfig = {
       'border-radius': 'var(--radius)',
       'padding-inline': '1.6rem',
       'box-shadow': '0 5px 0 ' + bgMuted,
+      color: fg,
+      'background-color': bgMuted,
       ...(typographyCustom.blockquoteStyle === 'normal' && { 'font-style': 'normal' })
     },
     'blockquote::after': {
@@ -98,7 +100,8 @@ const typographyConfig = {
         padding: '0.3em 0.5em',
         border: '1px solid hsl(var(--border) / 1)',
         'border-radius': 'var(--radius)',
-        'background-color': 'hsl(var(--muted) / var(--un-bg-opacity, 1))'
+        'background-color': 'hsl(var(--muted) / var(--un-bg-opacity, 1))',
+        color: 'hsl(var(--muted-foreground))'
       },
       ':not(pre)>code::before,:not(pre)>code::after': {
         content: 'none'

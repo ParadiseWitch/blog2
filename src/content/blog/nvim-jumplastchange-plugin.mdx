@@ -1,6 +1,6 @@
 ---
 title: 在nvim中跳转到上次修改位置
-description: 在nvim中实现跳转到上次修改为止的插件
+description: 在nvim中实现跳转到上次修改位置的插件
 publishDate: 2025-08-26 08:00:00
 ---
 
@@ -9,7 +9,7 @@ publishDate: 2025-08-26 08:00:00
 在idea写代码的时候, 经常会有写着写着忘记某个方法参数或者具体实现，想要进入到源码中看下代码，但是有时候溯源堆栈太深，想要返回上次编写代码的位置时需要找半天。
 这时ideavim就有个好用的功能，可以将idea自带的action绑定到ideavim的快捷键中。如比，我在`ideavim.rc`有如下配置：
 
-```vimrc
+```vim
 nnoremap [c :action JumpToLastChange<CR>
 nnoremap ]c :action JumpToNextChange<CR>
 ```
