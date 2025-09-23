@@ -117,4 +117,4 @@ vim.api.nvim_create_user_command("ChangeHistory", M.show_history, {})
 return M
 ```
 
-上面代码基本实现了跳转上\下次修改位置，显示历史修改位置。实际使用起来还有点小问题，如果在terminal buffer的修改也会记录进去，但是日常使用影响不大，姑且先就这样吧。
+上面代码基本实现了跳转到上(下)一次修改位置、以及显示历史修改位置的功能。实际使用起来还有点小问题，比如在terminal buffer中从normal模式进入insert模式时,也会将其作为修改也会记录进去。不过日常使用影响不大，姑且先就这样吧。
